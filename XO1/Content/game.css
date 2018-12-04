@@ -1,0 +1,14 @@
+﻿#game .column {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    /*text-align: center;*/
+    border: 1px solid black;
+}
+
+#game div.line {
+    display: block;
+    text-align: center;
+}

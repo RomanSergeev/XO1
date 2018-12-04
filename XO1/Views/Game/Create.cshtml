@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "New game";
+}
+
+<h2>Create new game</h2>
+
+<br/>
+<br/>
+
+<!-- Here some blek megik with namings should work -->
+<form method="post" action="@Url.Action("Index", "Game")">
+    <div>
+        <label for="lines"># of lines: </label>
+        <input type="number" min="3" max="10" value="3" name="lines" class="form-control"/>
+    </div>
+    <br/>
+    <div>
+        <label for="cols"># of columns: </label>
+        <input type="number" min="3" max="10" value="3" name="cols" class="form-control"/>
+    </div>
+    <br/>
+    <div>
+        <label for="winLength">winning sequence has length: </label>
+        <input type="number" min="3" max="10" value="3" name="winLength" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <label for="playerMoveFirst">My step is first</label>
+        <input name="playerMoveFirst" type="checkbox" checked />
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="Create" class="btn btn-primary"/>
+    </div>
+</form>

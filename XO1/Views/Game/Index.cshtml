@@ -1,0 +1,22 @@
+﻿@using XO1.Services
+@model XO1.Models.Game
+@{
+    ViewBag.Title = "Game index";
+}
+
+<h2>Game Index</h2>
+
+<div id="game">
+    @if (Model != null)
+    {
+        for (int i = 0; i < Model.lines; i++)
+        {
+    <div class="line">
+        @for (int j = 0; j < Model.cols; j++)
+        {
+            <button class="btn column">@GameService.sign(Model.field[i][j])</button>
+        }
+    </div>
+        }
+    }
+</div>
